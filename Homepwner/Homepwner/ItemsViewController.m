@@ -55,4 +55,13 @@
     [[cell textLabel] setText:[p description]];
     return cell;
 }
+
+- (UIView *)headerView
+{
+    if (!headerView) {
+        [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];
+    }
+    return headerView;
+}
+
 @end
